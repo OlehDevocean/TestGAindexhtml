@@ -13,5 +13,19 @@
 </head>
 <body>
   <h1>Сайт для тесту GA4</h1>
+
+   <!-- Кнопка для теста -->
+  <button onclick="trackButtonClick()">Нажми меня</button>
+  
+  <script>
+    // Функція для отправки події в GA4
+    function trackButtonClick() {
+      gtag('event', 'button_click', {
+        event_category: 'test',
+        event_label: 'Кнопка на главной'
+      });
+      alert('Событие отправлено в GA4!');
+    }
+  </script>
 </body>
 </html>
